@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stackology/static/css/main.ed039d71.css",
+    "main.js": "/stackology/static/js/main.1400383b.js",
+    "index.html": "/stackology/index.html",
+    "main.ed039d71.css.map": "/stackology/static/css/main.ed039d71.css.map",
+    "main.1400383b.js.map": "/stackology/static/js/main.1400383b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed039d71.css",
+    "static/js/main.1400383b.js"
+  ]
+}
