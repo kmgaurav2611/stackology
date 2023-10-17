@@ -27,10 +27,10 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
                 });
                 return postsAdapter.setAll(initialState, loadedPosts)
             },
-            providesTags: (result, error, arg) => [
-                { type: 'Post', id: "LIST" },
-                ...result.ids.map(id => ({ type: 'Post', id }))
-            ]
+            // providesTags: (result, error, arg) => [
+            //     { type: 'Post', id: "LIST" },
+            //     ...result?.ids.map(id => ({ type: 'Post', id }))
+            // ]
         }),
         getPostsByUserId: builder.query({
             query: id => `/posts/?userId=${id}`,
@@ -49,9 +49,9 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
                 });
                 return postsAdapter.setAll(initialState, loadedPosts)
             },
-            providesTags: (result, error, arg) => [
-                ...result.ids.map(id => ({ type: 'Post', id }))
-            ]
+            // providesTags: (result, error, arg) => [
+            //     ...result?.ids.map(id => ({ type: 'Post', id }))
+            // ]
         }),
         addNewPost: builder.mutation({
             query: initialPost => ({

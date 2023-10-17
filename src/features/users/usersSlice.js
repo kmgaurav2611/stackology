@@ -12,10 +12,10 @@ export const usersApiSlice = apiSlice.injectEndpoints({
             transformResponse: responseData => {
                 return usersAdapter.setAll(initialState, responseData)
             },
-            providesTags: (result, error, arg) => [
-                { type: 'User', id: "LIST" },
-                ...result.ids.map(id => ({ type: 'User', id }))
-            ]
+            // providesTags: (result, error, arg) => [
+            //     { type: 'User', id: "LIST" },
+            //     ...result?.ids.map(id => ({ type: 'User', id }))
+            // ]
         })
     })
 })
